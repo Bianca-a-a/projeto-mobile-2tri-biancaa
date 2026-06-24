@@ -64,9 +64,7 @@ body {
 .botao {
     display: flex;
     justify-content: center;
-    margin-left: 600px;
-    background-color: #213657;
-    max-width: 300px;
+       
 }
 
 .geralista {
