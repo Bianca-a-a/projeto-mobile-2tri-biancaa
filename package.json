@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "name": "projeto-mobile-2tri-biancaa",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bianca-a-a/projeto-mobile-2tri-biancaa.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bianca-a-a/projeto-mobile-2tri-biancaa/issues"
+  },
+  "homepage": "https://github.com/Bianca-a-a/projeto-mobile-2tri-biancaa#readme"
+}
