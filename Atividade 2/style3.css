@@ -85,3 +85,20 @@ body {
     display: flex;
     justify-content: center;
 }
+
+button {
+    background-color: #213657;
+    color: #FFF3A2;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #15243b;
+}
