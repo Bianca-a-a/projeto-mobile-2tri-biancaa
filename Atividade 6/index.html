@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Painel Administrativo Escolar</title>
+</head>
+<body>
+
+  <div class="dashboard">
+    <header class="dashboard-header">
+      <div class="logo-area">
+        <h2>Painel Escolar</h2>
+      </div>
+      <button class="btn1" id="openFormBtn">Novo Registro</button>
+    </header>
+
+    <main class="dashboard-main">
+
+      <section class="noticia">
+        <div class="card cardinfo">
+          <h3>Aviso Geral</h3>
+          <p>A biblioteca estará fechada para manutenção nesta quinta-feira.</p>
+        </div>
+        <div class="card cardaviso">
+          <h3>Atenção!</h3>
+          <p>O prazo para entrega do trabalho de Física foi alterado.</p>
+        </div>
+        <div class="card cardalerta">
+          <h3>Urgente</h3>
+          <p>Reunião de pais e responsáveis agendada para amanhã às 19h.</p>
+        </div>
+      </section>
+
+      <section class="content-section">
+
+        <div class="contentcx tabelacontainer">
+          <h3>Lista de Presença</h3>
+          <table class="datatabela">
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Turma</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Ana Silva</td>
+                <td>3º Ano A</td>
+                <td><span class="status statuspresente">Presente</span></td>
+              </tr>
+              <tr>
+                <td>Bruno Costa</td>
+                <td>3º Ano B</td>
+                <td><span class="status statusfalta">Ausente</span></td>
+              </tr>
+              <tr>
+                <td>Carla Dias</td>
+                <td>3º Ano A</td>
+                <td><span class="status statusjusti">Justificado</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="content-box todo-container">
+          <h3>Lista de Tarefas</h3>
+          <div class="listafazer">
+            <div class="cardfazer">
+              <h4>Preparar Aula</h4>
+              <p>Revisar slides do capítulo 4 de história.</p>
+            </div>
+            <div class="cardfazer">
+              <h4>Corrigir Provas</h4>
+              <p>Lançar notas pendentes no sistema.</p>
+            </div>
+            <div class="cardfazer">
+              <h4>Responder E-mails</h4>
+              <p>Enviar feedbacks para a coordenação pedagógica.</p>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </main>
+  </div>
+
+</body>
+</html>
