@@ -1,0 +1,98 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #ffd3af;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+h1.titulo1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+.titulo2 {
+    margin-top: 0;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.titulo3 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.caixa {
+    background-color: #ffefe1;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+
+.formulario label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #555;
+}
+
+.formulario input, 
+.formulario select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    background-color: #0e4468;
+    transform: translateY(-5px);
+}
+
+.avisos {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.aviso-card {
+    background-color: #ffefe1;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    border-left: 6px solid #f76b5c;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.aviso-card h3 {
+    margin-top: 0;
+    color: #f76b5c;
+    font-size: 22px;
+}
+
+.aviso-card p {
+    line-height: 1.6;
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 0;
+}
