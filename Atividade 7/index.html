@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios Atividade 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main class="container">
+        <section class="card">
+            <h2>Botão com Mensagem</h2>
+            <button onclick="alert('Você clicou no botão.')" class="btn-primary">Clique aqui</button>
+        </section>
+
+        <section class="card">
+            <h2>Sistema de Aluno</h2>
+            <input type="text" id="nomeAluno" placeholder="Digite o nome do aluno" oninput="mostrarNome()" class="input-field">
+            <p id="paragrafoNome" class="resultado-aluno">Nome: </p>
+        </section>
+
+        <section class="card">
+            <h2>Lista de Tarefas</h2>
+            <div class="form-group">
+                <input type="text" id="textoTarefa" placeholder="Digite uma nova tarefa" class="input-field">
+                <button onclick="adicionarTarefa()" class="btn-success">Adicionar</button>
+            </div>
+            <ul id="listaTarefas" class="lista-itens"></ul>
+        </section>
+
+        <section class="card">
+            <h2>Lista de Avisos</h2>
+            <div class="form-group">
+                <input type="text" id="textoAviso" placeholder="Digite um novo aviso" class="input-field">
+                <button onclick="adicionarAviso()" class="btn-warning">Adicionar</button>
+            </div>
+            <ul id="listaAvisos" class="lista-itens"></ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
