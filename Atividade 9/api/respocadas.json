@@ -1,0 +1,10 @@
+{
+  "statusHttp": "201 Created",
+  "mensagem": "Usuário criado com sucesso.",
+  "usuario": {
+    "id": "usr-4567",
+    "nome": "Ana Souza",
+    "email": "ana.souza@email.com",
+    "dataCriacao": "2026-07-06T13:43:00Z"
+  }
+}

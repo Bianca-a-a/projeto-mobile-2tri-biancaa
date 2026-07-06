@@ -1,0 +1,17 @@
+{
+    "tarefaId": "tsk-1024",
+    "titulo": "Resumo de História",
+    "descricao": "Ler o capítulo 4 e elaborar um resumo sobre a Revolução Industrial.",
+    "disciplina": "História",
+    "prazoEntrega": "2026-07-13T23:59:00Z",
+    "status": "pendente",
+    "prioridade": "alta",
+    "anexos": [
+      {
+        "nomeArquivo": "capitulo_4_livro.pdf",
+        "url": "https://exemplo.com"
+      }
+    ],
+    "pontosAtribuidos": 100
+  }
+  

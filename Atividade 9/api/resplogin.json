@@ -1,0 +1,10 @@
+{
+  "statusHttp": "200 OK",
+  "mensagem": "Login realizado com sucesso.",
+  "tokenAcesso": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c",
+  "usuario": {
+    "id": "usr-9012",
+    "nome": "João Silva",
+    "email": "joao.silva@exemplo.com"
+  }
+}
