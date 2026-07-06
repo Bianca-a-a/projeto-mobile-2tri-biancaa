@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel de Integração Back-End</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Painel de Integração</h2>
+
+        <div id="mensagem-sucesso" class="alerta sucesso oculta"></div>
+        <div id="mensagem-erro" class="alerta erro oculta"></div>
+
+        <div class="grid">
+            <div class="card">
+                <h3>Criar Usuário</h3>
+                <form id="form-usuario">
+                    <input type="text" id="nome-usuario" placeholder="Nome do usuário" required>
+                    <button type="submit">Cadastrar Usuário</button>
+                </form>
+            </div>
+
+            <div class="card">
+                <h3>Criar Tarefa</h3>
+                <form id="form-tarefa">
+                    <input type="text" id="titulo-tarefa" placeholder="Descrição da tarefa" required>
+                    <button type="submit">Criar Tarefa</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="secao-avisos">
+            <h3>Avisos Recebidos do Servidor</h3>
+            <button id="btn-atualizar" class="btn-secundario">Atualizar Avisos</button>
+            <ul id="lista-avisos">
+                <li class="aviso-vazio">Nenhum aviso carregado. Clique em atualizar.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
