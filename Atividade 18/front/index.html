@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sistema de Login e Tarefas</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 40px; }
+    form, .acoes { margin-bottom: 20px; }
+    input, button { padding: 10px; margin: 5px 0; display: block; width: 250px; }
+    button { cursor: pointer; background: #007BFF; color: white; border: none; }
+    button.logout { background: #DC3545; }
+    .lista-tarefas { margin-top: 20px; background: #f4f4f4; padding: 15px; display: none; }
+  </style>
+</head>
+<body>
+
+  <h2>Tela de Login</h2>
+  <form id="loginForm">
+    <input type="email" id="email" placeholder="E-mail (joao@email.com)" required />
+    <input type="password" id="senha" placeholder="Senha (123)" required />
+    <button type="submit">Entrar</button>
+  </form>
+
+  <div class="acoes">
+    <h3>Ações Protegidas</h3>
+    <button onclick="buscarTarefas()">Ver Minhas Tarefas</button>
+    <button onclick="logout()" class="logout">Sair / Logout</button>
+  </div>
+
+  <div id="blocoTarefas" class="lista-tarefas">
+    <h4>Suas Tarefas:</h4>
+    <ul id="lista"></ul>
+  </div>
+
+  <script>
+    const API_URL = "http://localhost:3000";
+
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const email = document.getElementById('email').value;
+      const senha = document.getElementById('senha').value;
+
+      try {
+        const response = await fetch(`${API_URL}/login`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ email, senha })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          localStorage.setItem('token', data.token);
+          alert('Login realizado! O token foi salvo no localStorage.');
+        } else {
+          alert(`Erro: ${data.mensagem}`);
+        }
+      } catch (error) {
+        alert('Não foi possível conectar ao servidor backend.');
+      }
+    });
+
+    async function buscarTarefas() {
+      const token = localStorage.getItem('token');
+      const blocoTarefas = document.getElementById('blocoTarefas');
+      const lista = document.getElementById('lista');
+      lista.innerHTML = ""; 
+
+      try {
+        const response = await fetch(`${API_URL}/tarefas`, {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          blocoTarefas.style.display = "block";
+          data.tarefas.forEach(tarefa => {
+            const li = document.createElement('li');
+            li.textContent = tarefa;
+            lista.appendChild(li);
+          });
+        } else {
+          blocoTarefas.style.display = "none";
+          alert(`Acesso Negado: ${data.mensagem}`);
+        }
+      } catch (error) {
+        alert('Erro ao buscar tarefas do servidor.');
+      }
+    }
+
+    async function logout() {
+      const token = localStorage.getItem('token');
+      
+      try {
+        await fetch(`${API_URL}/logout`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${token}`
+          }
+        });
+      } catch (error) {
+        console.log('Servidor indisponível para invalidar sessão, limpando local.');
+      }
+
+      localStorage.removeItem('token'); 
+      document.getElementById('blocoTarefas').style.display = "none";
+      alert('Sessão encerrada! Token removido.');
+    }
+  </script>
+</body>
+</html>
